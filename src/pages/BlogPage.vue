@@ -80,14 +80,20 @@ export default {
       function () {
         this.getPosts();
 
-        let newUrl = queryString.stringifyUrl({
-          url: window.location.pathname,
-          query: {
+        let newUrl =
+          window.location.origin +
+          "/" +
+          "#/blogs" +
+          "?" +
+          queryString.stringify({
             limit: this.limit,
             page: this.page,
             ...this.filter,
-          },
-        });
+          });
+
+        console.log(window.location.origin + "/" + "#/blogs");
+        console.log(newUrl);
+
         window.history.pushState({}, null, newUrl);
       },
       {
