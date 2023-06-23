@@ -84,7 +84,7 @@ Vue.directive("validator", validator);
 
 Vue.filter("currency", currency);
 
-console.log('hello world')
+console.log('hello world testing')
 
 new Vue({
   render: (h) => h(App),
